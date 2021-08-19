@@ -182,9 +182,10 @@ def injectmodel(scale,wData,fData,rvtot,night,kp,ph,rr,tEff):
 ############## TELLURIC REMOVAL WITH SPORK NORMALIZATION ################
 
 '''Inputs:
-- spec: observed spectral series (in ADU/s) '''
+- spec: observed spectral series (in ADU/s)
+- smoothing_factor: inputted via iterative smoothing '''
 
-def remove_tellurics_p(spec, ds):
+def remove_tellurics_p(spec, smoothing_factor):
     #sp_wave = spec[0,1,:].copy()
     no, nf, nx = spec.shape        # Getting dimensions
     yy = np.arange(nf)             # Used to detrend in time (see loop below)
@@ -197,7 +198,7 @@ def remove_tellurics_p(spec, ds):
         # looping over phases
         for j in range(nf):
             spc = spec[io,j,].copy()
-            cs = splrep(np.linspace(0,1024,1024),mspc, s=ds) 
+            cs = splrep(np.linspace(0,1024,1024),mspc, s = smoothing_factor) 
             f = splev(np.linspace(0,1024,1024),cs,der=0)
             # Excluding NaNs
             iok = np.isfinite(spc)

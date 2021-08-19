@@ -1,4 +1,3 @@
-import csv
 import matplotlib.gridspec as gridspec
 import math
 
@@ -202,7 +201,7 @@ def remove_tellurics_p(spec):
             # Excluding NaNs
             iok = np.isfinite(spc)
             # Computing the 2nd order fit on the finite elements only
-            spc /= jifit(spc,511,np.linspace(0,1024,1024),1,5)/np.max(spc)
+            spc /= spork(spc,511,np.linspace(0,1024,1024),1,5)/np.max(spc)
             
             coef = np.polyfit(f[iok],spc[iok],2)
             fit = coef[0]*f**2 + coef[1]*f + coef[2]

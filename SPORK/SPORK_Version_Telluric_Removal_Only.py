@@ -196,7 +196,7 @@ def remove_tellurics_p(spec):
         # looping over phases
         for j in range(nf):
             spc = spec[io,j,].copy()
-            cs = splrep(np.linspace(0,1024,1024),mspc, s=0.5) ########################################### what s value??? previously iterating betwn 0 to 1
+            cs = splrep(np.linspace(0,1024,1024),mspc, s=0.5)
             f = splev(np.linspace(0,1024,1024),cs,der=0)
             # Excluding NaNs
             iok = np.isfinite(spc)
@@ -272,6 +272,7 @@ RV points). Inputs:
 - rvtot: systemic + barycentric velocities (same dimension as ph)
 - night: (1 or 2) the night being processed
 - hipass: apply a high-pass filter to the individual CCFs '''
+
 def cc_at_vrest(wData, fData, kp, ph, rvtot, night, hipass=False):
     ncc = 101
     rvlag = np.linspace(-150,150,ncc)

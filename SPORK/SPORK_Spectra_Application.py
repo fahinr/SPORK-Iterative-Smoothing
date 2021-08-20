@@ -89,7 +89,7 @@ plt.plot(one_spectrum)
 # Changing the knot spacing (*), and the upper/lower sigma clipping values will alter the fit to the data. 
 
 
-sp = spork(one_spectrum, 5, np.linspace(0,len(one_spectrum),len(one_spectrum)), 1, 6)
+sp = spork(one_spectrum, 5, np.linspace(0,len(one_spectrum),len(one_spectrum)), 1, 5)
 
 # Plotting real flux data against SPORK's fit of the real flux data.
 plt.plot(one_spectrum)

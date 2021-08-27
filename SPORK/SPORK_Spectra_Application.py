@@ -70,7 +70,14 @@ def spork(spec, N_knots, x, sigma_hi, sigma_low):
 
 ### Loading and plotting spectra ###
 
-all_spectra = np.load('FILE PATH') # Inputting the file path for the flux values desired. This will give you a 60x1024 array. Each row is one spectrum. 
+#
+#
+#   Using SPORK with example spectra.
+#
+#
+all_spectra = np.load('algn_regr.npy) # Inputting the file path for the flux values desired with sample spectra included. 
+            `                         #This will give you a 60x1024 array. Each row is one spectrum. 
+all_spectra = all_spectra[0]
 
 plt.imshow(all_spectra) # This will make a 2D plot of all the spectra previously inputted. 
 

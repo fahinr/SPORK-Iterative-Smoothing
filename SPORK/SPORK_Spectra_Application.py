@@ -100,6 +100,6 @@ sp = spork(one_spectrum, 5, np.linspace(0,len(one_spectrum),len(one_spectrum)), 
 
 # Plotting real flux data against SPORK's fit of the real flux data.
 plt.plot(one_spectrum)
-plt.plot(j)
+plt.plot(sp)
 
 

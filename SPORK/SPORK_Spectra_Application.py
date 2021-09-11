@@ -1,3 +1,8 @@
+""" The following program is an introduction to SPORK and instructions on how to apply it to spectra.
+    The first block is the source of SPORK, followed by the second block on how to use it and an explanation for it's parameters.
+    (More details on the README). """
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -5,6 +10,8 @@ import os
 
 from scipy import interpolate
 from astropy.io import fits
+
+################################## SPORK #################################################################
 
 def initialize_knots(wmin, wmax, knot_spacing):
     """ Place knots evenly through """
@@ -66,7 +73,7 @@ def spork(spec, N_knots, x, sigma_hi, sigma_low):
                              maxiter=5, sigma_lo=sigma_low, sigma_hi=sigma_hi,get_edges=False)(np.linspace(0,len(x),len(x)))
 
 
-
+#################################### APPLICATION ##############################################################
 
 ### Loading and plotting spectra ###
 

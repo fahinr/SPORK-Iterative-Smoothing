@@ -6,5 +6,6 @@ SPORK is designed specifically to locate a continuum even in the presence of man
 
 Spline knots can be placed arbitrarily. The lower sigma-clipping threshold is set to 1.0, as points even a little below the continuum belong to stellar or telluric lines and should be ignored. The upper sigma clipping threshold is set to 5.0, as features which rise sharply above a stellar spectrum are typically cosmic rays which should also be ignored.
 
+The repository features an instruction on how to apply SPORK, SPORK w/ Iterative Smoothing, SPORK without Iterative Smoothing, and Iterative Smoothing alone.
 This Github Page is directly apart of and in reference of the [SPORK research paper](https://arxiv.org/abs/2108.12057).
 

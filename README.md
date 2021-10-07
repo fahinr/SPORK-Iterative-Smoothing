@@ -4,7 +4,7 @@ This Github Page is directly apart of and in reference of the [SPORK research pa
 
 ## What is SPORK & Iterative Smoothing?
 
-SPORK is a **spectrum normalization routine** adapted from  the  stellar  abundance  determination  software [Spectroscopy Made Hard(er)](https://github.com/andycasey/smhr). The iterative smoothing counterpart is based on the python scipy package *interpolate*. Iterative smoothing maximizes SPORK by iterating logarithmically over a specific smoothing value to obtain a higher significances.  
+SPORK is a **spectrum normalization routine** adapted from  the  stellar  abundance  determination  software [Spectroscopy Made Hard(er)](https://github.com/andycasey/smhr). The iterative smoothing counterpart is based on the python scipy package *interpolate*. Iterative smoothing maximizes SPORK by iterating logarithmically over a specific smoothing value to obtain higher significances.  
 
 ## How does it work?
 

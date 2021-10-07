@@ -1,6 +1,6 @@
 # SPectral cOntinuum Refinement for telluriKs (SPORK) & Iterative Smoothing
 
-This Github Page is directly apart of and in reference of the [SPORK research paper](https://arxiv.org/abs/2108.12057).
+This Github Page is directly apart of and in reference of the [SPORK research paper](https://arxiv.org/abs/2108.12057). More information on how the tool is set and used can be found here.
 
 SPORK is a spectrum normalization routine adapted from  the  stellar  abundance  determination  software [Spectroscopy Made Hard(er)](https://github.com/andycasey/smhr). The iterative smoothing counterpart is based on the python scipy package *interpolate*.
 

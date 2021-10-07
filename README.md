@@ -9,6 +9,8 @@ Cubic splines of smooth interopolations are iteratively fit to minimize errors a
 
 The algorithm parameters begin with the actual spectrum first, followed by the knot spacing, which is the degree of fit that we set to 5.0, where too high is a bad fit and too low is a tight fit. Next is the wavelength array, followed by the lower and upper sigma clipping degrees.
 
-The repository features an instruction on how to apply and understand the parameters of SPORK, SPORK with Iterative Smoothing, SPORK without Iterative Smoothing, and Iterative Smoothing alone, with telluric removals. The files have their respective titles along with sample spectra to test on (algn_regr.npy).
+Ultimately, SPORK is a general smoothing/normalization routine that is used over spectra. When used with specific parameters and tweaked with iterations
+
+The repository features an instruction on how to apply and understand the parameters of SPORK, SPORK with Iterative Smoothing, SPORK without Iterative Smoothing, and Iterative Smoothing alone, with telluric removals (which removes any small fluctuating residuals). The files have their respective titles along with sample spectra to test on (algn_regr.npy).
 
 

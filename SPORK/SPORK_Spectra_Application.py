@@ -88,7 +88,7 @@ all_spectra = all_spectra[0]
 
 plt.imshow(all_spectra) # This will make a 2D plot of all the spectra previously inputted. 
 
-one_spectrum = all_spectra[0] # Here is the 0th spectrum & it's plot.
+one_spectrum = all_spectra[0] # Here is the 0th spectrum & its plot.
 plt.plot(one_spectrum) 
 
 

@@ -20,3 +20,6 @@ Ultimately, SPORK is a general smoothing/normalization routine that is used over
 The repository features an instruction on how to apply and understand the parameters of SPORK (`SPORK_Spectra_Application.py`), SPORK with Iterative Smoothing (`SPORK_Version_Iterative_Smoothing.py`), SPORK without Iterative Smoothing (`SPORK_Version_Telluric_Removal_Only.py`), with telluric removals (which removes any small fluctuating residuals) and finally, Iterative Smoothing with no other dependencies (no SPORK or telluric removal) (`Iterative_Smoothing_No_Tellurics.py`). The files have their respective titles along with sample spectra to test on (`algn_regr.npy`).
 
 
+
+Code created and modified by authors of SPORK
+

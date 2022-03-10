@@ -372,13 +372,22 @@ hikey = True
 
 # All iterations will be inputted into a csv file with 
 # each smoothing value's respective size and dsigma.
+'''
+maxsum: Returns the final maximum dsigma value
+maxindex: Returns the final maximum input smoothing size value
+count: Returns current iteration of the routine
 
+num_iter: Number of iterations to run over logarithmically - MUST CHANGE #####
+
+'''
 fields = ['SmoothingSize', 'Dsig']
 filename = "Smoothing_Values.csv"
 
 
 maxsum = 0
 maxindex = 0
+count = 1
+num_iter = 1000 ### Change to desire number of iterations.
 
 with open(filename, 'w') as csvfile: 
     # creating a csv writer object 
@@ -387,7 +396,9 @@ with open(filename, 'w') as csvfile:
     # writing the fields 
     csvwriter.writerow(fields) 
     #Iterate over logarithmic spaces
-    for i in np.geomspace(0.01, 1, num=1000):
+    for i in np.geomspace(0.01, 1, num=num_iter):
+        print("Running size value of ", i)
+        print("Iteration ", count, " of ", num_iter)
 
         telRem1 = remove_tellurics_p(algn1.copy(), i)
         telRem2 = remove_tellurics_p(algn2.copy(), i)
@@ -461,6 +472,7 @@ with open(filename, 'w') as csvfile:
                 if  maxv > maxsum:
                     maxsum = maxv
                     maxindex = i
+                count += 1
         
                 
 print('Max dsig = ', maxsum)
